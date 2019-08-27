@@ -30,28 +30,45 @@
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
+.status {
+    font-size: 1.4em;
+    color:#44345e;
+    text-align: center;
+    padding: 3vh 0;  
+    border: 2px solid #4c924c;  
+    border-radius: 7px; 
+    width: 50%;
+}
+
+.row {
+    display: flex;
+    margin-top: 2vh;
+}
+
 .square {
     font-size: 5em;
-    width: 14vw;
-    height: 14vw;
+    width: 10vw;
+    height: 10vw;
     margin: 0 0.3vw;
     background-color: #44345e;
     color: rgb(255, 125, 4);
     border: 4px solid #4c924c;
     border-radius: 7px;
+    text-align: center;
 }
 
 .square:focus {
     outline: none;
     background-color: #5f4a80;
+    box-shadow: 2px 4px 6px red;
 }
 
 .main {
-    /* display: flex; */
-    /* justify-content: space-around */
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
     width: 50vw;
     background-color: rgb(206, 185, 200);
-    /* margin-top: 15vh; */
 
 }
