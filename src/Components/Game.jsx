@@ -17,6 +17,9 @@ class Game extends Component {
 
   handleClick(i) {
     const array = this.state.squareArr
+    if (array[i] !== null) {
+      return
+    }
     array[i] = this.state.nextPlayer ? "X" : "O"
     this.setState({
       squareArr: array,
@@ -36,13 +39,15 @@ class Game extends Component {
 
   checkWinner = (array) => {
     // const [a, b, c, d, e, f, g, h, i] = this.state.squareArr
-    // console.log(array)
     // console.log(a, b, c, d, e, f, g, h, i)
 
-    if (array[0] === array[1] && array[1] === array[2] && array[0] !== null) {
+    if ((array[0] === array[1] && array[1] === array[2] && array[0] !== null) && (this.state.setWinner.length < 2)) {
       this.setState({
         setWinner: this.state.setWinner.push(array[0], array[1], array[2])
       })
+      // } else if (this.state.setWinner.length === 0) {
+
+
       console.log(this.state.setWinner)
 
       // return;
@@ -58,6 +63,8 @@ class Game extends Component {
       console.log('win 1 4 7')
     } else if (array[2] === array[4] && array[4] === array[6] && array[2] !== null) {
       console.log('win 2 4 6')
+    } else if (this.state.setWinner.length < 2) {
+      return;
     } else if (array.every(element => element !== null)) {
       console.log('no winner')
     }
