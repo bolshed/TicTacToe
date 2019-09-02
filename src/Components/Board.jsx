@@ -3,51 +3,31 @@ import Square from './Square';
 class Board extends Component {
 
     renderSquare(i) {
-        return <Square
+        return (<Square
             value={this.props.squareArr[i]}
             handleClick={() => this.props.handleClick(i)} />
+        )
     }
 
     render() {
         return (
             <div className='main'>
-                <h3 className="status"> Next player is: {this.props.nextPlayer ? 'X' : 'O'}</h3>
-
                 <div className="row">
-                    {this.renderSquare(0)}
-                    {this.renderSquare(1)}
-                    {this.renderSquare(2)}
+                    {this.renderSquare(0)}A
+                    {this.renderSquare(1)}B
+                    {this.renderSquare(2)}C
                 </div>
-
                 <div className="row">
-                    {this.renderSquare(3)}
-                    {this.renderSquare(4)}
-                    {this.renderSquare(5)}
+                    {this.renderSquare(3)}D
+                    {this.renderSquare(4)}E
+                    {this.renderSquare(5)}F
                 </div>
-
                 <div className="row">
-                    {this.renderSquare(6)}
-                    {this.renderSquare(7)}
-                    {this.renderSquare(8)}
+                    {this.renderSquare(6)}G
+                    {this.renderSquare(7)}H
+                    {this.renderSquare(8)}I
                 </div>
             </div >
-            // <div className='main'>
-            //     <div className="row">
-            //         <Square value={this.props.squareArr[0]} handleClick={() => this.props.handleClick(0)} />
-            //         <Square value={this.props.squareArr[1]} handleClick={() => this.props.handleClick(1)} />
-            //         <Square value={this.props.squareArr[2]} handleClick={() => this.props.handleClick(2)} />
-            //     </div>
-            //     <div className="row">
-            //         <Square value={this.props.squareArr[3]} handleClick={() => this.props.handleClick(3)} />
-            //         <Square value={this.props.squareArr[4]} handleClick={() => this.props.handleClick(4)} />
-            //         <Square value={this.props.squareArr[5]} handleClick={() => this.props.handleClick(5)} />
-            //     </div>
-            //     <div className="row">
-            //         <Square value={this.props.squareArr[6]} handleClick={() => this.props.handleClick(6)} />
-            //         <Square value={this.props.squareArr[7]} handleClick={() => this.props.handleClick(7)} />
-            //         <Square value={this.props.squareArr[8]} handleClick={() => this.props.handleClick(8)} />
-            //     </div>
-            // </div >
         )
     }
 }

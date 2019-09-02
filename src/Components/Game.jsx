@@ -10,26 +10,27 @@ class Game extends Component {
     this.state = {
       squareArr: Array(9).fill(null),
       nextPlayer: true,
-      setWinner: []
+      setWinner: null,
+      winningSquares: []
     }
-    this.handleClick = this.handleClick.bind(this)
+    // this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick(i) {
     const array = this.state.squareArr
     if (array[i] !== null) {
       return
+    } else if (this.state.setWinner) {
+      return
     }
+
     array[i] = this.state.nextPlayer ? "X" : "O"
     this.setState({
       squareArr: array,
       nextPlayer: !this.state.nextPlayer
     })
-    console.log(array)
-
     this.checkWinner(array)
     // this.togglePlayer()
-
   }
 
   // togglePlayer() { // no need to bind because there's no return. we don't use an output from this func//
@@ -38,46 +39,70 @@ class Game extends Component {
   // }
 
   checkWinner = (array) => {
-    // const [a, b, c, d, e, f, g, h, i] = this.state.squareArr
-    // console.log(a, b, c, d, e, f, g, h, i)
+    const [a, b, c, d, e, f, g, h, i] = this.state.squareArr
 
-    if ((array[0] === array[1] && array[1] === array[2] && array[0] !== null) && (this.state.setWinner.length < 2)) {
-      this.setState({
-        setWinner: this.state.setWinner.push(array[0], array[1], array[2])
-      })
-      // } else if (this.state.setWinner.length === 0) {
-
-
-      console.log(this.state.setWinner)
-
-      // return;
-    } else if (array[3] === array[4] && array[4] === array[5] && array[3] !== null) {
-      console.log('win 3 4 5')
-    } else if (array[6] === array[7] && array[7] === array[8] && array[6] !== null) {
-      console.log('win 6 7 8')
-    } else if (array[0] === array[4] && array[4] === array[8] && array[0] !== null) {
-      console.log('win 0 4 8')
-    } else if (array[2] === array[4] && array[4] === array[6] && array[2] !== null) {
-      console.log('win 2 4 6')
-    } else if (array[1] === array[4] && array[4] === array[7] && array[1] !== null) {
-      console.log('win 1 4 7')
-    } else if (array[2] === array[4] && array[4] === array[6] && array[2] !== null) {
-      console.log('win 2 4 6')
-    } else if (this.state.setWinner.length < 2) {
+    if (this.state.setWinner) {
       return;
+    } else if (a === b && b === c && a !== null) {
+      this.setState({
+        setWinner: a
+        // winnerIs: d
+      })
+    } else if (d === e && e === f && d !== null) {
+      this.setState({
+        setWinner: d,
+        // winnerIs: a
+      })
+    } else if (g === h && h === i && g !== null) {
+      this.setState({
+        setWinner: g,
+        // winnerIs: g
+      })
+    } else if (a === e && e === i && a !== null) {
+      this.setState({
+        setWinner: a,
+        // winnerIs: a
+      })
+    } else if (c === e && e === g && c !== null) {
+      this.setState({
+        setWinner: c,
+        // winnerIs: c
+      })
+    } else if (b === e && e === h && b !== null) {
+      this.setState({
+        setWinner: b,
+        // winnerIs: b
+      })
+    } else if (a === d && d === g && a !== null) {
+      this.setState({
+        setWinner: a,
+        // winnerIs: a
+      })
+    } else if (c === f && f === i && c !== null) {
+      this.setState({
+        setWinner: c,
+        // winnerIs: c
+      })
     } else if (array.every(element => element !== null)) {
       console.log('no winner')
     }
+    // console.log(this.state.setWinner)
   }
 
   render() {
+    let winner = this.state.setWinner
+    let player = this.state.nextPlayer
     return (
       <div className='Game'>
+
         <Board
           handleClick={(i) => this.handleClick(i)}
           nextPlayer={this.state.nextPlayer}
           squareArr={this.state.squareArr} />
-        {/* <h1>heading</h1> */}
+
+
+        {winner ? <h3 className="Winner"> The Winner is: {winner}</h3> : <h3 className="Status"> Next player is: {player ? 'X' : 'O'}</h3>}
+
       </div>
     )
   }

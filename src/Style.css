@@ -30,25 +30,51 @@
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
-.status {
+.Game {
+    display: flex;
+}
+
+.Status {
     font-size: 1.4em;
     color:#44345e;
     text-align: center;
-    padding: 3vh 0;  
+    padding: 1vh 0;  
     border: 2px solid #4c924c;  
     border-radius: 7px; 
-    width: 50%;
+    min-width: 40vw;
+    max-height: 10vh;
+    margin-left: 5vw;
+}
+
+.Winner {
+    font-size: 1.4em;
+    color: rgb(255, 125, 4);
+    background-color: #44345e;
+    text-align: center;
+    padding: 1vh 0;  
+    border: 2px solid #4c924c;  
+    border-radius: 7px; 
+    min-width: 40vw;
+    max-height: 10vh;
+    margin-left: 5vw;
+}
+
+.Info {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
 }
 
 .row {
     display: flex;
+    min-height: 10vw;
     margin-top: 2vh;
 }
 
 .square {
-    font-size: 5em;
+    font-size: 4.5vw;
     width: 10vw;
-    height: 10vw;
+    /* height: 10vw; */
     margin: 0 0.3vw;
     background-color: #44345e;
     color: rgb(255, 125, 4);
@@ -69,6 +95,6 @@
     align-items: center;
     min-height: 100vh;
     width: 50vw;
-    background-color: rgb(206, 185, 200);
+    background-color: rgb(190, 207, 142);
 
 }
