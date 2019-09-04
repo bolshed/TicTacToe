@@ -11,21 +11,21 @@ class Board extends Component {
 
     render() {
         return (
-            <div className='main'>
-                <div className="row">
-                    {this.renderSquare(0)}A
-                    {this.renderSquare(1)}B
-                    {this.renderSquare(2)}C
+            <div className='Main'>
+                <div className="Row">
+                    {this.renderSquare(0)}
+                    {this.renderSquare(1)}
+                    {this.renderSquare(2)}
                 </div>
-                <div className="row">
-                    {this.renderSquare(3)}D
-                    {this.renderSquare(4)}E
-                    {this.renderSquare(5)}F
+                <div className="Row">
+                    {this.renderSquare(3)}
+                    {this.renderSquare(4)}
+                    {this.renderSquare(5)}
                 </div>
-                <div className="row">
-                    {this.renderSquare(6)}G
-                    {this.renderSquare(7)}H
-                    {this.renderSquare(8)}I
+                <div className="Row">
+                    {this.renderSquare(6)}
+                    {this.renderSquare(7)}
+                    {this.renderSquare(8)}
                 </div>
             </div >
         )
