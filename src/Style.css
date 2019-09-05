@@ -41,7 +41,7 @@
     font-size: 1.4em;
     color:#44345e;
     text-align: center;
-    padding-top: 2vh;  
+    padding: 3vh 0;  
     border: 2px solid #4c924c;  
     border-radius: 7px; 
     min-width: 40vw;
@@ -55,7 +55,7 @@
     color: rgb(255, 125, 4);
     background-color: #44345e;
     text-align: center;
-    padding-top: 2vh;  
+    padding: 3vh 0;  
     border: 2px solid #4c924c;  
     border-radius: 7px; 
     min-width: 40vw;
