@@ -29,6 +29,7 @@ class Game extends Component {
       nextPlayer: !this.state.nextPlayer
     })
     this.checkWinner(array)
+
   }
 
   checkWinner = (array) => {
