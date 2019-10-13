@@ -1,1 +1,1 @@
-A simple Tic Tac Toe game made with React.
+A simple Tic Tac Toe game made with ReactJS.
