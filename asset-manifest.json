@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.ef46c923.chunk.css",
-    "main.js": "./static/js/main.aac820a2.chunk.js",
-    "main.js.map": "./static/js/main.aac820a2.chunk.js.map",
-    "runtime~main.js": "./static/js/runtime~main.55326fe0.js",
-    "runtime~main.js.map": "./static/js/runtime~main.55326fe0.js.map",
-    "static/js/2.70fe090f.chunk.js": "./static/js/2.70fe090f.chunk.js",
-    "static/js/2.70fe090f.chunk.js.map": "./static/js/2.70fe090f.chunk.js.map",
-    "index.html": "./index.html",
-    "precache-manifest.5422640c59176b6d7a8572a41818ce54.js": "./precache-manifest.5422640c59176b6d7a8572a41818ce54.js",
-    "service-worker.js": "./service-worker.js",
-    "static/css/main.ef46c923.chunk.css.map": "./static/css/main.ef46c923.chunk.css.map"
+    "main.css": "/bolshed/Tic-Tac-Toe_Game/static/css/main.3d65a31d.chunk.css",
+    "main.js": "/bolshed/Tic-Tac-Toe_Game/static/js/main.083ab139.chunk.js",
+    "main.js.map": "/bolshed/Tic-Tac-Toe_Game/static/js/main.083ab139.chunk.js.map",
+    "runtime~main.js": "/bolshed/Tic-Tac-Toe_Game/static/js/runtime~main.59e13fa2.js",
+    "runtime~main.js.map": "/bolshed/Tic-Tac-Toe_Game/static/js/runtime~main.59e13fa2.js.map",
+    "static/js/2.70fe090f.chunk.js": "/bolshed/Tic-Tac-Toe_Game/static/js/2.70fe090f.chunk.js",
+    "static/js/2.70fe090f.chunk.js.map": "/bolshed/Tic-Tac-Toe_Game/static/js/2.70fe090f.chunk.js.map",
+    "index.html": "/bolshed/Tic-Tac-Toe_Game/index.html",
+    "precache-manifest.1efc88d3e855267e13495a7504830597.js": "/bolshed/Tic-Tac-Toe_Game/precache-manifest.1efc88d3e855267e13495a7504830597.js",
+    "service-worker.js": "/bolshed/Tic-Tac-Toe_Game/service-worker.js",
+    "static/css/main.3d65a31d.chunk.css.map": "/bolshed/Tic-Tac-Toe_Game/static/css/main.3d65a31d.chunk.css.map"
   }
 }
