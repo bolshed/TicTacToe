@@ -12,9 +12,8 @@ class Game extends Component {
       squareArr: Array(9).fill(null),
       nextPlayer: true,
       setWinner: null,
-      winningSquares: []
+      // winningSquares: []
     }
-    // this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick(i) {
@@ -56,19 +55,29 @@ class Game extends Component {
     return null
   }
 
+  restartGame = () => {
+    this.setState({
+      squareArr: Array(9).fill(null),
+      nextPlayer: true,
+      setWinner: null
+    })
+  }
+
   render() {
 
 
     return (
-      <div className='Game'>
+      <div className='game'>
         <Board
           handleClick={(i) => this.handleClick(i)}
           nextPlayer={this.state.nextPlayer}
-          squareArr={this.state.squareArr} />
+          squareArr={this.state.squareArr}
+        />
         <Status
           setWinner={this.state.setWinner}
           nextPlayer={this.state.nextPlayer}
           squareArr={this.state.squareArr}
+          restartGame={this.restartGame}
         />
       </div>
     )
