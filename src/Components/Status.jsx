@@ -14,7 +14,7 @@ function Status(props) {
         status = <h3 className="status"> Next player is: {player ? 'X' : 'O'}</h3>
     }
     return (
-        <div>
+        <div className='info'>
             {status}
             <button className='restart' onClick={props.restartGame}> Restart game </button>
         </div>
