@@ -1,31 +1,39 @@
 @media only screen and (min-width: 600px) {
     .game {
       display: flex;
-      background-color: #e8eb5a
+      background-color: #e8eb5a;
     }
     .main {
       min-height: 100vh;
+      padding: 0 5vw;
+    }
+    .square {
+        min-height: 12vw;
+        min-width: 12vw;
     }
     .status {
+      margin: 29vh 5vw 17vh;
+    }
+    .winner {
       margin: 29vh 5vw 17vh;
     }
 }
 
 @media only screen and (max-width: 599px) {
     .game {
-        max-width: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: #e8eb5a
     }
     .main {
-        min-height: 60vh;
+        min-height: 48vh;
+        padding: 0 10vw;
     }
-    .info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .square {
+        min-height: 12vh;
+        min-width: 12vh;
     }
 }
 
@@ -34,20 +42,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50vw;
     background-color: rgb(190, 207, 142);
-    /* padding-top: 5vh; */
 }
 
 .row {
     display: flex;
-    min-height: 12vw;
     margin-top: 2vh;
 }
 
 .square {
     font-size: 6vw;
-    min-width: 12vw;
     margin: 0 0.4vw;
     background-color: #44345e;
     color: rgb(255, 125, 4);
@@ -62,8 +66,15 @@
     box-shadow: 2px 4px 6px rgb(255, 102, 0);
 }
 
+.info {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .status {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color:#44345e;
     text-align: center;
     padding: 3vh 0;  
@@ -78,11 +89,10 @@
     color: rgb(255, 125, 4);
     background-color: #44345e;
     text-align: center;
-    padding: 3vh 0;  
+    padding: 3vh 2vw;  
     border: 2px solid #4c924c;  
     border-radius: 7px; 
     min-width: 40vw;
-    margin: 29vh 5vw 17vh;
     text-align: center
 }
 
@@ -90,8 +100,7 @@
     font-size: 1.8em;
     color: rgb(255, 125, 4);
     background-color: #44345e;
-    text-align: center;
-    padding: 3vh 0 2vw;  
+    padding: 3vh 2vw;  
     border: 2px solid #4c924c;  
     border-radius: 7px; 
     min-width: 40vw;
